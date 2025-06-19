@@ -4,60 +4,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bernard Jenaringo – Intern at Quantum Opus</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+
   <style>
+    :root {
+      --primary-bg: #f4f4f4;
+      --card-bg: #ffffff;
+      --accent: #4062ff;
+      --accent-light: #e7f0ff;
+      --text-main: #333;
+      --text-sub: #555;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Montserrat", Arial, sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 20px;
-      background-color: #f4f4f4;
+      background: linear-gradient(135deg, var(--primary-bg) 0%, #e9eef2 100%);
+      color: var(--text-main);
     }
 
     .container {
       max-width: 800px;
       margin: auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: var(--card-bg);
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
     }
 
     h1 {
-      color: #333;
-      margin-bottom: 10px;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 2rem;
     }
 
     h2 {
-      color: #555;
-      margin-top: 20px;
+      color: var(--text-sub);
+      margin-top: 28px;
+      font-weight: 600;
+      font-size: 1.25rem;
     }
 
     p {
-      margin: 10px 0;
+      margin: 12px 0;
     }
 
     .highlight {
-      background: #e7f3ff;
+      background: var(--accent-light);
       padding: 2px 6px;
       border-radius: 4px;
+      color: var(--accent);
     }
 
     /* Bernard's portrait styling */
     .profile-pic {
       display: block;
-      max-width: 200px;   /* hard‑limit */
-      width: 60%;         /* responsive */
+      max-width: 200px; /* hard‑limit */
+      width: 60%; /* responsive */
       height: auto;
-      margin: 0 auto 20px auto; /* center + spacing */
+      margin: 0 auto 24px auto; /* center + spacing */
       border-radius: 50%; /* circular crop */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
-    /* By‑line styling */
+    .profile-pic:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
     .written-by {
-      margin-top: 30px;
+      margin-top: 40px;
       font-style: italic;
       text-align: right;
       color: #777;
+    }
+
+    /* Dark‑mode support */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary-bg: #121212;
+        --card-bg: #1e1e1e;
+        --text-main: #e0e0e0;
+        --text-sub: #c0c0c0;
+        --accent-light: rgba(64, 98, 255, 0.15);
+      }
+
+      body {
+        background: linear-gradient(135deg, #1f1f1f 0%, #2a2a2a 100%);
+      }
     }
   </style>
 </head>
@@ -66,30 +116,57 @@
     <h1>Bernard "Sam" Jenaringo</h1>
 
     <!-- Bernard's portrait -->
-    <img
-      src="Bernard.png"
-      alt="Portrait of Bernard Jenaringo"
-      class="profile-pic"
-    />
+    <img src="Bernard.png" alt="Portrait of Bernard Jenaringo" class="profile-pic" />
 
     <h2>Intern at Quantum Opus</h2>
-    <p>Bernard Jenaringo was an intern at <span class="highlight">Quantum Opus</span>, bringing with him a remarkable life story shaped by perseverance, curiosity, and quiet dedication.</p>
+    <p>
+      Bernard Jenaringo was an intern at
+      <span class="highlight">Quantum Opus</span>, bringing with him a remarkable
+      life story shaped by perseverance, curiosity, and quiet dedication.
+    </p>
 
     <h2>Early Life &amp; Background</h2>
-    <p>In his late fifties, Bernard is originally from <strong>Dudsland</strong>, a small town in the Netherlands, and immigrated to the United States decades ago in search of opportunity and a better life.</p>
+    <p>
+      In his late fifties, Bernard is originally from <strong>Dudsland</strong>, a
+      small town in the Netherlands, and immigrated to the United States decades
+      ago in search of opportunity and a better life.
+    </p>
 
     <h2>Career Journey</h2>
-    <p>For most of his adult years, Bernard worked humbly and tirelessly as a janitor at a local elementary school in Plymouth, Michigan. It was there that he nurtured a quiet passion for science, often reading discarded textbooks and striking up conversations with curious students and patient teachers.</p>
-    <p>His fascination with physics—particularly the quantum world—never dimmed, even as he quietly swept hallways and polished floors.</p>
+    <p>
+      For most of his adult years, Bernard worked humbly and tirelessly as a
+      janitor at a local elementary school in Plymouth, Michigan. It was there
+      that he nurtured a quiet passion for science, often reading discarded
+      textbooks and striking up conversations with curious students and patient
+      teachers.
+    </p>
+    <p>
+      His fascination with physics—particularly the quantum world—never dimmed,
+      even as he quietly swept hallways and polished floors.
+    </p>
 
     <h2>Joining Quantum Opus</h2>
-    <p>Eventually, that passion led Bernard to cross paths with Quantum Opus, a Michigan‑based company at the forefront of superconducting photon detection. Despite his unconventional background, his dedication and insatiable curiosity earned him a rare internship, offering him a chance to finally engage directly with the field he had admired from afar for so long.</p>
+    <p>
+      Eventually, that passion led Bernard to cross paths with Quantum Opus, a
+      Michigan-based company at the forefront of superconducting photon
+      detection. Despite his unconventional background, his dedication and
+      insatiable curiosity earned him a rare internship, offering him a chance
+      to finally engage directly with the field he had admired from afar for so
+      long.
+    </p>
 
     <h2>Current Challenges</h2>
-    <p>Unfortunately, Bernard is currently facing deportation proceedings by U.S. Immigration and Customs Enforcement (ICE), placing his future in the country—and in the field he loves—in jeopardy.</p>
+    <p>
+      Unfortunately, Bernard is currently facing deportation proceedings by U.S.
+      Immigration and Customs Enforcement (ICE), placing his future in the
+      country—and in the field he loves—in jeopardy.
+    </p>
 
     <h2>Legacy of Resilience</h2>
-    <p>Nevertheless, his story is one of quiet resilience: a testament to how passion can persist, and even flourish, against the odds.</p>
+    <p>
+      Nevertheless, his story is one of quiet resilience: a testament to how
+      passion can persist, and even flourish, against the odds.
+    </p>
 
     <p class="written-by">Written by Jack Delfino</p>
   </div>
