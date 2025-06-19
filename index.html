@@ -71,14 +71,15 @@
       color: var(--accent);
     }
 
-    /* Bernard's portrait styling */
+    /* Bernard's portrait styling – larger & less cropped */
     .profile-pic {
       display: block;
-      max-width: 200px; /* hard‑limit */
-      width: 60%; /* responsive */
+      max-width: 300px; /* larger hard‑limit */
+      width: 75%;       /* responsive */
       height: auto;
       margin: 0 auto 24px auto; /* center + spacing */
-      border-radius: 50%; /* circular crop */
+      border-radius: 12px; /* softer rounded corners (less crop) */
+      object-fit: cover;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
